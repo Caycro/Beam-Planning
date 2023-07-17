@@ -1,0 +1,3 @@
+//store each block entered in the form:
+//in future coould be a seperate table in a DB which contains this and UserDetails.CSV
+UserWhoEntered, BlockSize, TypeOfDayUsed

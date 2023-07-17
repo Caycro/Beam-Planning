@@ -1,0 +1,81 @@
+
+<html><
+<head>
+    <title> Desired Times 
+
+    </title>
+</head>
+<body>
+    <form>
+        <input type="text" name="Name">
+
+        <input type="email" name="Email">
+
+        <input type="number" name = "blocknum">
+
+       
+        <!use something like Jinja with a for loop to ask for a length and type of day used for each block user wants
+
+        //uses jinja for a for loop in the html attributes>
+        
+        {% for i in range(blocknum) %}
+
+        <tr>
+            <!create a table which will ask for the details of each block the user wants>
+            <td>
+                
+                <select name="Type of day" id = "DayType">
+
+                    <option value="weekday">weekday</option>
+
+                    <option value="weekend or holiday"> Weekend or holiday </option>
+
+                </select>
+
+            </td>
+
+            <td>
+
+                <input type="number" name = "sizeOfBlock">
+            </td>
+        </tr>
+
+        {% endfor %}
+        
+        <button type="submit" onclick="ValidateForm()"> 
+            Submit 
+        </button>
+        
+        
+    </form>
+    <script type="text/javascript">
+        ValidateForm()
+        {
+
+        let valid = true
+        let blocknum = document.getElementById("blocknum")
+        //reject the form if the number of blocks chosen if less then 1 or is not an integer
+        If (blocknum <1 || Math.floor(blocknum) != blocknum )
+            {
+            valid = false
+            }
+        If (valid)
+            {
+            //store in UserDetails.CSV
+            }
+        elif (!valid)
+            {
+            alert("your form was invalid please restart")
+            }
+        }
+
+
+        StoreBlocks()
+        {
+            let ColumnOfSizes = document.getElementsByName("sizeOfBlock")
+            let ColumnOfDayTypes = document.getElementsByName("Type of day")
+            //store Column of sizes and column of daytypes in BlockData.csv
+        }
+    </script>
+</body>
+</html>
