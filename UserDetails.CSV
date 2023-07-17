@@ -1,0 +1,3 @@
+//store each Form entered in the Structure:
+//in future coould be a seperate table in a DB which contains this and BlockData.CSV
+Name,Email
