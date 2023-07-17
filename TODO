@@ -1,0 +1,8 @@
+make Database in Booking.db
+Should have the following tables: Users, AcceptedUsers (users who's proposal has been approved)
+                                  TimeBlocksUsersWant, TimeBlocksUsed
+
+Make app do the following things:
+    Get Users and give admin ability to reject/accept them
+    Provide 2 Forms one for all users to give proposal, one for accepted users to provide details for blocktimes
+    
