@@ -2,7 +2,12 @@ make Database in Booking.db
 Should have the following tables: Users, AcceptedUsers (users who's proposal has been approved)
                                   TimeBlocksUsersWant, TimeBlocksUsed
 
-Make app do the following things:
-    Get Users and give admin ability to reject/accept them
-    Provide 2 Forms one for all users to give proposal, one for accepted users to provide details for blocktimes
+Make app do the following things in response to different requests:
+    give admin ability to reject/accept users proposals
+    Give admin ability to manually edit calender after it is made
+    After proposals are done give admit ability to 'Plan it' causing the calender to be generated based on fields in DB
+    Provide 2 Forms one for all users to give proposal, one for accepted users to provide details for blocktimes 
+
+HTML:
+    Make Html for Initial All Users form
     
