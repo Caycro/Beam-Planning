@@ -1,10 +1,11 @@
-from flask import Flask
 
+
+from flask import Flask
 'initialize app'
 app = Flask(__name__)
 
 'get database'
-db = SQL("sqllite:///Booking.db")
+db = sqlite3("sqllite:///Booking.db")
 
 @app.route('/')
 def Test():
@@ -12,4 +13,5 @@ def Test():
     return
 
 @app.route('/GetBlocks')
-def 
+def SaveBlocks():
+    'flask insert into sql database'
