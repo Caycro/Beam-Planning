@@ -1,11 +1,14 @@
 
 
+import _sqlite3
 from flask import Flask
-'initialize app'
+db = _sqlite3.connect("Booking.db")
+#initialiseapp
+
 app = Flask(__name__)
 
 'get database'
-db = sqlite3("sqllite:///Booking.db")
+
 
 @app.route('/')
 def Test():
@@ -14,4 +17,5 @@ def Test():
 
 @app.route('/GetBlocks')
 def SaveBlocks():
-    'flask insert into sql database'
+    ' insert into sql databases table of blocks'
+    
