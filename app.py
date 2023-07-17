@@ -16,7 +16,7 @@ def Test():
     return
 
 @app.route('/GetBlocks')
-def SaveBlocks():
+def Save_Blocks():
     ' insert into sql databases table of blocks'
-        db.execute("Insert into Blocks ")
+    db.execute("Insert into Blocks ")
     
