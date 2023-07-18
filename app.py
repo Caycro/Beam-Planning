@@ -22,6 +22,9 @@ def LoadUsers():
     return dataBase
 
 #load the days that the beam is avaliable
+#may need to be modified later currently loads from days which are allocated to be usable from the csv
+#but would be better to have a file of start and end dates with dates unavalible also in file as this would require less time on human end
+
 def LoadDays(Days):
     
     with open('DaysAvaliable.txt','r') as data:
