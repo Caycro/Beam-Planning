@@ -7,3 +7,6 @@ https://forms.office.com/e/hgd2dwXzZq
 With these forms someone can then click responses and then download an excel file containign the responses (can be maunally edited)
 (should be done to assign a priority rank to each accepted proposal)
 the excel file should then be saved as a CSV (must be done manually) in order to be used by the python app
+
+the proposal form does not really fit into any of the app instead proposals should be evaluated by someone and then if sucessfuly the reviewer should send a link of the booking form to the accepted proposer
+the reviewer should also give a priority rank (between 1 and 10 with larger number being better) in the excel for the second form (if no priority rank is assigned 1 should be automatically given)
