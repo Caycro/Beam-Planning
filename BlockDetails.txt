@@ -1,0 +1,4 @@
+
+User-Email, BlockSize, TypeOfDayUsed
+TestEmail, 3 , Weekend
+TestEmail2, 2 ,WeekDay
