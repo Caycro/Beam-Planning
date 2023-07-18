@@ -31,7 +31,7 @@ def LoadDays(Days):
                 Days.append(row)
 
 
-def AllocateBlock(user, days,finalPlan):
+def AllocateBlock(user, days, finalPlan):
      #for currentDay in days:
           #if current day is not in users list of unavaliable days 
           # and is of a type which can be used by one of their blocks
@@ -48,7 +48,7 @@ def main():
     finalPlan=[]
     
     LoadDays(daysAvaliable)
-    for i in userDetails.items() -> dict_items:
+    for i in userDetails.values():
         AllocateBlock(i,daysAvaliable,finalPlan)
 
 
