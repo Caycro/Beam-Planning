@@ -62,7 +62,7 @@ def main():
     LoadDays(daysAvaliable)
     for i in userDetails.values():
         AllocateBlock(i, daysAvaliable, finalPlan)
-
+    
 
 
 main()
