@@ -1,5 +1,8 @@
 
 import csv
+#app currently doesnt work, file loading problems
+#files loaded will likely need to be renamed due to the way microsoft forms responses get converted into excel
+#most of this app is probably deprecated  
 #load all of the details users entered into UserDetails.CSV
 def LoadBlocks():
 
