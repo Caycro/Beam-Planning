@@ -15,7 +15,7 @@ def LoadUsers():
     #load the csv file into variable called database
     with open('ModelCSV.txt', mode= 'r') as data:
         csvReader = csv.DictReader(data,delimiter=",",dialect= "excel")
-        for row in csv.DictReader(data):
+        for row in csvReader:
             
             dataBase.update(row)
         
@@ -26,9 +26,8 @@ def LoadDays(Days):
     
     with open('DaysAvaliable.txt','r') as data:
         csvReader = csv.DictReader(data,delimiter=",",dialect= "excel")
-        for row in csv.DictReader(data):
-            
-                Days.append(row)
+        for row in csvReader:
+            Days.append(row)
 
 
 def AllocateBlock(user, days, finalPlan):
@@ -36,10 +35,20 @@ def AllocateBlock(user, days, finalPlan):
           #if current day is not in users list of unavaliable days 
           # and is of a type which can be used by one of their blocks
           #reduce block size by 1 and allocate that day to current user by modifying final plan
-          #repeat until no days avalible for that user or that users has all blocks filled
+          #repeat until no days avalible for that user or that users has all blocks filled,
+          #or more then max % of allowed days has been allocated
     print("WIP")
 
 
+def DisplayFinalPlan(finalPlan):
+    #for i in finalPlan:
+       #if i.day == empty
+        #in calender make i black
+       #else:
+        #for admin chart make i's colour unique to user on that day (probably done by a dictionary with user and colour)
+
+        #for other people just show its used (seperate colour other then black) 
+    print("WIP")
             
 
 def main():
@@ -49,7 +58,7 @@ def main():
     
     LoadDays(daysAvaliable)
     for i in userDetails.values():
-        AllocateBlock(i,daysAvaliable,finalPlan)
+        AllocateBlock(i, daysAvaliable, finalPlan)
 
 
 
