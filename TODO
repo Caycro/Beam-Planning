@@ -1,13 +1,15 @@
-make Database in Booking.db
-Should have the following tables: Users, AcceptedUsers (users who's proposal has been approved)
-                                  TimeBlocksUsersWant, TimeBlocksUsed
 
-Make app do the following things in response to different requests:
-    give admin ability to reject/accept users proposals
-    Give admin ability to manually edit calender after it is made
-    After proposals are done give admit ability to 'Plan it' causing the calender to be generated based on fields in DB
-    Provide 2 Forms one for all users to give proposal, one for accepted users to provide details for blocktimes 
+Python App: get the details in the CSV from the form and load them into a dictionary
+should then create a new dictionary with the prioirty assigned and date submitted being replaced by a new field which represents the actual priority it should be determined by a calculation which has a positive (but not necessarilly linear) relationship with the time elapsed since form submission and the assigned priority by the admins
 
-HTML:
-    Make Html for Initial All Users form
+From there the app should do the following: order the dictionary by the actual priorioty
+from there assign each person in the dictionary with the earliest days that are not yet used that both: the beam and the user are free and which are in the type their block requires
+do this until either: everyone has been assigned a place
+                      for none of the unassigned users there is a day avaliable
+                      greater then the maximum % of avalible days has been assigned (these remaining days are avaliable for ad-hoc proposals)
+
+after all days are assigned create a table in a calender format which shows wwhich days are booked and which are free
+this can then be sent to others who may want to appoint someone
+additonally a seperate table should be created for admins which allows for them to view who has booked each day 
+
     

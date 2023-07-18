@@ -1,1 +1,9 @@
-https://forms.office.com/Pages/ResponseDetailPage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAADRgjp5URUZLUFlXTzBWNlU2OThMQ09aSkVSVFVYMy4u&rid=1&GetResponseToken=5mQxdggkJoY-PWwWSR6Ad8JrKoB0zcUjXUn0NitC0e0&origin=OfficeDotCom&lang=en-GB&route=OfficeHome&sessionId=e405aa0d-fe27-4fc3-9898-048b899d2967
+
+Booking form for people accepted
+https://forms.office.com/e/PUGPF0erEd
+Proposal form:
+https://forms.office.com/e/hgd2dwXzZq
+
+With these forms someone can then click responses and then download an excel file containign the responses (can be maunally edited)
+(should be done to assign a priority rank to each accepted proposal)
+the excel file should then be saved as a CSV (must be done manually) in order to be used by the python app
