@@ -8,9 +8,9 @@ and from there it will
   does not allow for making holidays (so a day being treated as weekend or weekday is completly determined by what day of the week it is)
   does not provide options for certain days not being allowed to be used by machine 
 
-#potential problems
+# potential problems
   was made in windows in visual studio (not vs code) meaning in may not function properly on linux or mac
   calender UI is awful (just run it to find out but it looks ugly and doesnt convey the information well
 
-#howver
+# However
   despite these issues all that needs to be done (in terms of this part) is to make UI better and fix the issues mentioned
