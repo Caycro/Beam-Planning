@@ -8,7 +8,8 @@ import csv
 #most of this app is probably deprecated due to  only needing one file now (CSV from accepted form)
 #load all of the details users entered into UserDetails.CSV
 
-#load the csv from the form into the rpogram as a dictionary
+
+#load the csv from the form into the program as a dictionary
 def LoadUsers():
     
     dataBase=dict
@@ -21,9 +22,9 @@ def LoadUsers():
         
     return dataBase
 
-#load the days that the beam is avaliable
-#may need to be modified later currently loads from days which are allocated to be usable from the csv
-#but would be better to have a file of start and end dates with dates unavalible also in file as this would require less time on human end
+# load the days that the beam is avaliable
+# may need to be modified later currently loads from days which are allocated to be usable from the csv
+# but would be better to have a file of start and end dates with dates unavalible also in file as this would require less time on human end
 
 def LoadDays(Days):
     
