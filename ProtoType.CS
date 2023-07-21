@@ -1,12 +1,10 @@
 namespace PlanIt
 {
-
-
-
     internal class Program
     {
         static void Main(string[] args)
         {
+            float unAssignedPercent = 0;
             DateTime startDate;
             DateTime endDate;
             List<BookedDates> bookedDates;
@@ -14,19 +12,22 @@ namespace PlanIt
             LoadUsers(users);
             //sort the users based on their priority
             users.Sort((x, y) => x._priorty.CompareTo(y._priorty));
-            Console.WriteLine("what is the start date (DD/MM/YY)");
-            string date = Console.ReadLine();
-            startDate = DateTimeFromInput(date);
-            //potential error here  has not been tested
-            Console.WriteLine("what is the end date (DD/MM/YY)");
-            date = Console.ReadLine();
-            endDate = DateTimeFromInput(date);
-            bookedDates = GenerateCalender(startDate, endDate);
+            GetDates(out startDate, out endDate, out bookedDates);
+            int numBooked = 0;
+            Console.WriteLine("what % of days should be kept empty for ad hoc use");
+            while (!float.TryParse(Console.ReadLine(), out unAssignedPercent)) ;
+
 
             //go through every user in order on the ranked list and give them the bookings required
             foreach (User u in users)
             {
-                AssignDatesToUser(u, bookedDates);
+                AssignDatesToUser(u, bookedDates, ref numBooked);
+                //unsure that the required % of dates requicred for adhoc is fulfilled
+                if (numBooked / bookedDates.Count * 100 > (100 - unAssignedPercent))
+                {
+                    break;
+                }
+
             }
             DisplayCalender(bookedDates);
 
@@ -54,9 +55,31 @@ namespace PlanIt
             }
         }
 
-        
+        private static void GetDates(out DateTime startDate, out DateTime endDate, out List<BookedDates> bookedDates)
+        {
+            string date, date2;
+            Console.WriteLine("what is the start date (YYYY/MM/DD)");
+            date = Console.ReadLine();
 
-        public static void AssignDatesToUser(User user, List<BookedDates> calender)
+            //potential error here  has not been tested
+            Console.WriteLine("what is the end date (YYYY/MM/DD)");
+            date2 = Console.ReadLine();
+
+            while (!DateTime.TryParse(date, out startDate) || !DateTime.TryParse(date2, out endDate));
+            {
+                Console.WriteLine("what is the start date (YYYY/MM/DD)");
+                date = Console.ReadLine();
+
+                //potential error here  has not been tested
+                Console.WriteLine("what is the end date (YYYY/MM/DD)");
+                date2 = Console.ReadLine();
+            }
+            bookedDates = GenerateCalender(startDate, endDate);
+        }
+
+
+
+        public static void AssignDatesToUser(User user, List<BookedDates> calender, ref int numBooked)
         {
             foreach (BookedDates currentDate in calender)
             {
@@ -68,6 +91,7 @@ namespace PlanIt
                         {
                             b._length--;
                             currentDate.booker = user;
+                            numBooked++;
                         }
                     }
                 }
@@ -83,7 +107,7 @@ namespace PlanIt
             }
             return dates;
         }
-
+        
 
         //convert an array of string to DateTimes
 
